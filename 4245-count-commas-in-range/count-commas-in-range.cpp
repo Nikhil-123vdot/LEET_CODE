@@ -1,20 +1,23 @@
 class Solution {
 public:
     int countCommas(int n) {
-        int ans = 0;
-
-        for (int i = 1000; i <= n; i++) {
-            int x = i;
-            int digits = 0;
-
-            while (x > 0) {
-                x /= 10;
-                digits++;
-            }
-
-            ans += (digits - 1) / 3;
+        int count = 0;
+        int a=n;
+        while(a >= 1) {
+            a = a / 10;
+            count++;
         }
-
-        return ans;
+        if(count<4)
+        {
+            return 0;
+        }
+        int commas=(count-1)/3;
+        int minus=1;
+        for(int i=0;i<commas;i++)
+        {
+            minus=minus*1000;
+        }
+        int amount=n-minus;
+        return (commas*amount)+1;
     }
 };
