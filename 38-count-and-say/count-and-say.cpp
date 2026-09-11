@@ -11,7 +11,7 @@ public:
             {
                 char ch=ans[j];
                 int count=0;
-                while(j<ans.size() && ans[j]==ch)
+                while( ans[j]==ch)
                 {
                     count++;
                     j++;
