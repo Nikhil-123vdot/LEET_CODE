@@ -3,8 +3,8 @@ public:
     long long countSubarrays(vector<int>& nums, long long k) {
         long long int n=nums.size();
         long long int prefixSum=0;
-        long long int start=0;
-        long long int end=0;
+        int start=0;
+        int end=0;
         long long int total=0;
         while(end<n)
         {
